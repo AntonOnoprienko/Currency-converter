@@ -1,8 +1,53 @@
-.container {
-	max-width: 800px;
-	margin: 0 auto;
-	padding-top: 3rem;
-}
-h1 {
+.header {
+
+	width: 480px ;
+	margin: 40px auto;
 	text-align: center;
+}
+.header span {
+	color: green;
+}
+.title{
+	font-size: 40px;
+	color: green;
+}
+.national_bank{
+	font-size: 10px;
+	text-align: right;
+	padding-right: 15px;
+	
+}
+.usd{
+	margin-right: 50px;
+}
+.wrapper_converter{
+
+	margin: 50px auto;
+	width: 300px;
+	height: 100px;
+	display: flex;
+  	
+justify-content: center
+}
+
+input{
+	width: 200px;
+	height: 50px;
+	font-size: 20px;
+	background-color:lightgray;
+}
+select{
+	margin-top: 3px;
+	width: 208px;
+	height: 20px;
+}
+form{
+	display: flex;
+}
+button{
+	margin: 0 10px
+}
+label {
+	font-size: 10px;
+	color: grey;
 }

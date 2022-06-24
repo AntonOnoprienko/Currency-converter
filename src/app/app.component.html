@@ -1,7 +1,39 @@
-<div class="container">
-	<h1>Hello Angular</h1>
-	<app-form></app-form> >
-	<app-card></app-card>
-	<app-card></app-card>
-	<app-card></app-card>
+<div class="header">
+	<div class="title">
+		CURRENCY CONVERTER
+	</div>
+	<div class="national_bank"> Rates from National bank of Ukraine at {{date}}</div>
+
+	<p><b><img src="../assets/us.png" width="23px">USD Доллар США </b>:<span class='usd'>{{rates.USD}}
+		</span>
+		<b><img src="../assets/eu.png" width="23px">EUR ЕВРО</b>:<span>{{rates.EUR}}</span>
+	</p>
+
+</div>
+<div class="wrapper_converter">
+
+
+	<div class="left_wrapper">
+		<input type='number' value={{input}} #myInput
+			(input)="getValueOutput(myInput.value,leftselect.value,rightselect.value)">
+		<br>
+		<select #leftselect (input)="getValueOutput(myInput.value,leftselect.value,rightselect.value)">
+			<option value={{rates.EUR}}>EUR</option>
+			<option selected value={{rates.USD}}>USD</option>
+			<option value={{rates.UAH}}>UAH</option>
+		</select>
+		<label>Please select currency</label>
+	</div>
+	<div class="right_wrapper">
+		<input type="number" #myOutput value={{output}}
+			(input)="getValueInput(myOutput.value,rightselect.value,leftselect.value)" />
+		<br>
+		<select #rightselect (input)="getValueInput(myOutput.value,rightselect.value,leftselect.value)">
+			<option value={{rates.EUR}}>EUR</option>
+			<option selected value={{rates.USD}}>USD</option>
+			<option value={{rates.UAH}}>UAH</option>
+		</select>
+		<label>Please select currency</label>
+	</div>
+
 </div>
