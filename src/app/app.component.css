@@ -29,7 +29,9 @@
   	
 justify-content: center
 }
-
+.left_wrapper{
+	margin-right: 30px;
+}
 input{
 	width: 200px;
 	height: 50px;
