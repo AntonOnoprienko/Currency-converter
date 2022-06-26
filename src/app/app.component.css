@@ -1,6 +1,10 @@
+.contant_container {
+	width: 480px;
+	margin: 0px auto;
+	padding-top: 50px;
+}
+
 .header {
-	width: 480px ;
-	margin: 40px auto;
 	text-align: center;
 }
 
@@ -25,8 +29,6 @@
 
 .wrapper_converter{
 	margin: 50px auto;
-	width: 300px;
-	height: 100px;
 	display: flex;	
    justify-content: center
 }
@@ -35,27 +37,21 @@
 	margin-right: 30px;
 }
 
-input{
+.wrapper_converter input{
 	width: 200px;
 	height: 50px;
 	font-size: 20px;
 	background-color:lightgray;
 }
-select{
+.wrapper_converter select{
 	margin-top: 3px;
 	width: 208px;
 	height: 20px;
 }
-
-form{
-	display: flex;
-}
-
-button{
+.wrapper_converter button{
 	margin: 0 10px
 }
-
-label {
+.wrapper_converter label {
 	font-size: 10px;
 	color: grey;
 }

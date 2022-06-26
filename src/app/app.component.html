@@ -1,45 +1,47 @@
-<div class="header">
+<div class="contant_container">
+	<div class="header">
 
-	<div class="title">
-		CURRENCY CONVERTER
+		<div class="title">
+			CURRENCY CONVERTER
+		</div>
+
+		<div class="national_bank"> Rates from National bank of Ukraine at {{date| date:"dd MMMM yyyy"}}</div>
+
+		<p><b><img src="../assets/us.png" width="23px">USD Доллар США </b>:<span
+				class='usd'>{{rates[0].value.toFixed(3)}}</span>
+			<b><img src="../assets/eu.png" width="23px">EUR ЕВРО</b>:<span>{{rates[1].value.toFixed(3)}}</span>
+		</p>
+
 	</div>
 
-	<div class="national_bank"> Rates from National bank of Ukraine at {{date| date:"dd MMMM yyyy"}}</div>
-
-	<p><b><img src="../assets/us.png" width="23px">USD Доллар США </b>:<span
-			class='usd'>{{rates[0].value.toFixed(3)}}</span>
-		<b><img src="../assets/eu.png" width="23px">EUR ЕВРО</b>:<span>{{rates[1].value.toFixed(3)}}</span>
-	</p>
-
-</div>
-
-<div class="wrapper_converter">
+	<div class="wrapper_converter">
 
 
-	<div class="left_wrapper">
+		<div class="left_wrapper">
 
-		<input type='number' #Input value={{input}}
-			(input)="getOutputValue(Input.value,leftselect.value,rightselect.value)">
-		<br>
-		<select #leftselect (input)="getOutputValue(Input.value,leftselect.value,rightselect.value)">
+			<input type='number' #Input value={{input}}
+				(input)="getOutputValue(Input.value,leftselect.value,rightselect.value)">
+			<br>
+			<select #leftselect (input)="getOutputValue(Input.value,leftselect.value,rightselect.value)">
 
-			<option *ngFor="let cur of rates" value={{cur.value}}>{{cur.current}}</option>
+				<option *ngFor="let cur of rates" value={{cur.value}}>{{cur.current}}</option>
 
-		</select>
-		<label>Please select currency</label>
-	</div>
+			</select>
+			<label>Please select currency</label>
+		</div>
 
-	<div class="right_wrapper">
+		<div class="right_wrapper">
 
-		<input type="number" #Output value={{output}}
-			(input)="getInptValue(Output.value,rightselect.value,leftselect.value)">
-		<br>
-		<select #rightselect (input)="getInptValue(Output.value,rightselect.value,leftselect.value)">
+			<input type="number" #Output value={{output}}
+				(input)="getInptValue(Output.value,rightselect.value,leftselect.value)">
+			<br>
+			<select #rightselect (input)="getInptValue(Output.value,rightselect.value,leftselect.value)">
 
-			<option *ngFor="let cur of rates" value={{cur.value}}>{{cur.current}}</option>
+				<option *ngFor="let cur of rates" value={{cur.value}}>{{cur.current}}</option>
 
-		</select>
-		<label>Please select currency</label>
+			</select>
+			<label>Please select currency</label>
 
+		</div>
 	</div>
 </div>
